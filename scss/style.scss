@@ -69,7 +69,7 @@ a{text-decoration: none;}
         border: none;
     }
     
-    .step01{
+    .step{
         width: 1000px;
         margin: 0 auto;
 
@@ -168,8 +168,9 @@ a{text-decoration: none;}
             }
         }
 
-        .table_01{
+       table{
             margin-top: 30px;
+            margin-bottom: 30px;
 
             width: 100%;
             border-collapse: collapse;
@@ -187,37 +188,87 @@ a{text-decoration: none;}
                     width: auto;
                     padding: 12px 30px;
                     border-left: 1px solid #f0f0f0;
+                    position: relative;
 
                     .input{
                          width: 360px; height: 32px; padding: 2px 10px 4px 10px; resize: none; border: 1px solid #ccc; line-height: 32px;
                          margin-right: 10px;
                     }
+                    .short{
+                        width: 169px; margin-right: 0;
+                    }
+                    .long{
+                        width: 740px;
+                        margin-top: 7px;
+                    }
                     .slt{
-                        height: 24px; overflow: hidden; position: relative;
+                        height: 24px; overflow: hidden;
+
                         select{
                             height: 32px; padding: 5px 24px 6px 8px;
                             border: 1px solid #dbdbdb;
                             font-size: 13px; line-height: 24px;
                         }
                     }
-                    .gender{
-                        .btnD{
-                            cursor: pointer;
-                            display: inline-block; width: auto; height: 32px;
-                            margin-left: -5px;
-                            padding: 0 15px; border: 1px solid #d3d3d3;
-                            background: #fff; color: #212121; 
-
-                            &.dark{
-                                background: #212121;
-                                color: #d3d3d3;
-                            }
-                        }
-                        
+                    .notice_msg{
+                        display: block;
+                        margin-top: 7px;
+                        font: 12px/1 'arial'; color: #212121;
                     }
+                    
+                    .btnD{
+                        cursor: pointer;
+                        display: inline-block; width: auto; height: 32px;
+                        margin-left: -5px;
+                        padding: 0 15px; border: 1px solid #d3d3d3;
+                        background: #fff; color: #212121; 
+
+                        &.dark{
+                            background: #212121;
+                            color: #d3d3d3;
+                        }
+                    }
+
+                    .addressbtnD{
+                        margin-left: 10px;
+                    }
+
+                    
+                    .dor_list{
+                        display: block;
+                        &::after{
+                            content: ''; clear: both; display: block;
+                        }
+                        li{
+                            float: left;
+                            .clickChb{
+                                display: inline-block; height: 16px; position: relative;
+                                input[type=checkbox]{
+                                    width: 16px; height: 16px; position: absolute; top: 50%; margin-top: -5px;
+                                }
+                                label{
+                                     padding: 0 20px; box-sizing: border-box;
+                                    font: 11px/1 'arial'; color: #212121;
+                                }
+                            }
+                            
+                        }
+                    }
+                    
                 }
             }
-        }
 
+        }
+        input[type="submit"]{
+            // background: #ff5b59;
+            background: #222222;
+            width: 240px;
+            height: 60px;
+            border: none;
+            margin-top: 30px;
+
+            font: bold 16px/1 'arial';
+            color: #ffffff;
+        }
     }
 }

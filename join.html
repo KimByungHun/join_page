@@ -24,7 +24,7 @@
         <form action="/" method="post" id="joinForm">
             <fieldset>
                 <legend class="hidden">회원가입 입력 양식</legend>
-                    <div class="step01">
+                    <div class="step step01">
                         <h3>본인인증</h3>
                         <div class="phone_01">
                             <ul>
@@ -109,11 +109,11 @@
                         <table summary="이름, 생년월일, 휴대폰번호" class="table_01">
                             <tbody>
                                 <tr>
-                                    <th scope="row"><label for="01_name"></label>이름 *</th>
+                                    <th scope="row"><label for="01_name" ></label>이름 *</th>
                                     <td>
                                         <div class="01_text">
                                             <span>
-                                                <input type="text" class="input" placeholder="예 : 김병훈">
+                                                <input type="text" class="input" placeholder="예 : 김병훈" required>
                                             </span>
                                             <span class="slt">
                                                 <select name="country" id="country">
@@ -129,7 +129,7 @@
                                     <td>
                                         <div class="01_text">
                                             <span>
-                                                <input type="text" class="input" placeholder="예 : 19961025">
+                                                <input type="text" class="input" placeholder="예 : 19961025" required>
                                             </span>
                                             <span class="gender">
                                                 <button type="button" name="gend" class="btnD dark">
@@ -147,7 +147,7 @@
                                     <td>
                                         <div class="01_text">
                                             <span>
-                                                <input type="text" class="input" placeholder="예 : 01012345678">
+                                                <input type="text" class="input" placeholder="예 : 01012345678" required>
                                             </span>
                                         </div>
                                     </td>
@@ -156,6 +156,179 @@
                             </tbody>
                         </table>
                     </div>
+
+                    <div class="step step02">
+                        <h3>필수항목</h3>
+                        <table summary="아이디(이메일주소), 비밀번호, 비밀번호 확인. 주소" class="table_02">
+                            <tbody>
+                                <tr>
+                                    <th scope="row"><label for="02_id"></label>아이디(이메일 주소)</th>
+                                    <td>
+                                        <div class="01_text">
+                                            <span>
+                                                <input type="text" class="input short" required>
+                                            </span>
+                                            <span>@</span>
+                                            <span>
+                                                <input type="text" class="input short">
+                                            </span>
+                                            <span class="slt">
+                                                <select name="email" id="email">
+                                                    <option value>직접입력</option>
+                                                    <option value="naver.com">naver.com</option>
+                                                    <option value="gmail.com">gmail.com</option>
+                                                    <option value="daum.net">daum.com</option>
+                                                    <option value="nate.com">nate.com</option>
+                                                </select>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><label for="02_pwd"></label>비밀번호</th>
+                                    <td>
+                                        <div class="01_text">
+                                            <span>
+                                                <input type="text" class="input" placeholder="비밀번호 입력" required>
+                                            </span>
+                                            <span class="notice_msg">
+                                                10자 이상, 영문 대소문자, 숫자 중 2가지 이상 조합
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><label for="02_pwd"></label>비밀번호 확인</th>
+                                    <td>
+                                        <div class="01_text">
+                                            <span>
+                                                <input type="text" class="input" placeholder="비밀번호 입력" required>
+                                            </span>
+                                            <span class="notice_msg">
+                                                10자 이상, 영문 대소문자, 숫자 중 2가지 이상 조합
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><label for="02_adress"></label>주소</th>
+                                    <td>
+                                        <div class="01_text">
+                                            <span>
+                                                <input type="text" class="input short">
+                                            </span>
+                                            <button type="button" name="address" class="btnD addressbtnD">
+                                                우편번호 검색
+                                            </button>
+                                            <span>
+                                                <input type="text" class="input long" placeholder="도로명 주소">
+                                            </span>
+                                            <span>
+                                                <input type="text" class="input long" placeholder="지번 주소">
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h3>선택항목</h3>
+                        <table summary="아이디(이메일주소), 비밀번호, 비밀번호 확인. 주소" class="table_02">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">휴면전환 기간</th>
+                                    <td>
+                                        <ul class="dor_list">
+                                            <li>
+                                                <span class="clickChb">
+                                                    <input type="checkbox" id="dor_list1" value="1">
+                                                    <label for="dor_list1">
+                                                    1년</label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="clickChb">
+                                                    <input type="checkbox" id="dor_list1" value="3">
+                                                    <label for="dor_list1">
+                                                    3년</label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="clickChb">
+                                                    <input type="checkbox" id="dor_list1" value="5">
+                                                    <label for="dor_list1">
+                                                    5년</label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="clickChb">
+                                                    <input type="checkbox" id="dor_list1" value="none">
+                                                    <label for="dor_list1">
+                                                    탈퇴 시 까지</label>
+                                                </span>
+                                            </li>
+                                        </ul>
+
+                                        <span class="notice_msg">
+                                            별도의 선택이 없을 시 휴면전환 기간은 1년으로 설정 됩니다.
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">마케팅정보 수신동의</th>
+                                    <td>
+                                        <span class="notice_msg" style="text-decoration: underline;">
+                                            수신 미동의 회사에서 진행하는 이벤트 및 할인 등의 정보를 받아보실 수 없으며. 추가 해택 제공 대상에서 제외 될 수 있습니다.
+                                        </span>
+                                        <span class="notice_msg">
+                                            (회원가입/구매/회사의 주요정책 관련 정보는 모든 회원에게 발송 됩니다.).
+                                        </span>
+                                        <ul class="dor_list">
+                                            <li>
+                                                <span class="clickChb">
+                                                    <input type="checkbox" id="mrk_list1" value="1">
+                                                    <label for="mrk_list1">
+                                                    SMS</label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="clickChb">
+                                                    <input type="checkbox" id="mrk_list2" value="2">
+                                                    <label for="mrk_list2">
+                                                    E-mail</label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="clickChb">
+                                                    <input type="checkbox" id="mrk_list3" value="3">
+                                                    <label for="mrk_list3">
+                                                    DM</label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="clickChb">
+                                                    <input type="checkbox" id="mrk_list4" value="4">
+                                                    <label for="mrk_list4">
+                                                    CALL</label>
+                                                </span>
+                                            </li>
+                                        </ul>
+
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <table class="step3 step">
+						<tr>
+							<th class="submit" colspan="2" >
+								<input type="submit" value="가입하기">
+							</th>
+						</tr>
+					</table>
+
             </fieldset>
         </form>
     </div>
